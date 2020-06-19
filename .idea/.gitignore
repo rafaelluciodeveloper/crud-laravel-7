@@ -6,3 +6,11 @@
 /dataSources.local.xml
 # Editor-based HTTP Client requests
 /httpRequests/
+/crud-laravel-7.iml
+/deployment.xml
+/laravel-plugin.xml
+/misc.xml
+/modules.xml
+/php.xml
+/phpunit.xml
+/vcs.xml
