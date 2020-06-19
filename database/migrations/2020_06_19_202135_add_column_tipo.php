@@ -5,7 +5,7 @@ use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Schema;
 
-class AddIndexClientsId extends Migration
+class AddColumnTipo extends Migration
 {
     /**
      * Run the migrations.
@@ -15,8 +15,8 @@ class AddIndexClientsId extends Migration
     public function up()
     {
         Schema::table('clients', function (Blueprint $table) {
-            $table->primary('id');
-            DB::statement("ALTER TABLE `clients` ADD INDEX `codigo` (`codigo`)");
+            $table->char('tipo',2);
+            DB::statement("ALTER TABLE `clients` CHANGE COLUMN `codigo` `codigo` INT(10) UNSIGNED NOT NULL AUTO_INCREMENT AFTER `id`;");
         });
     }
 
@@ -28,7 +28,7 @@ class AddIndexClientsId extends Migration
     public function down()
     {
         Schema::table('clients', function (Blueprint $table) {
-            $table->dropPrimary('clients_id_primary');
-         });
+            //
+        });
     }
 }

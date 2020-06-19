@@ -2,6 +2,7 @@
 
 use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
+use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Schema;
 
 class CreateClientTable extends Migration
@@ -19,6 +20,7 @@ class CreateClientTable extends Migration
             $table->string('nome');
             $table->string('cpf');
             $table->timestamps();
+
         });
     }
 
